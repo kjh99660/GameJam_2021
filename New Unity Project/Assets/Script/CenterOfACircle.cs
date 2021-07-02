@@ -15,12 +15,16 @@ public class CenterOfACircle : MonoBehaviour
     private bool leftToRight = true;
     void Start()
     {
-        temp = 5f * Time.deltaTime;
-        wayPoint = new Vector3[4];
-        wayPoint.SetValue(new Vector3(0, 0, 0), 0);
-        wayPoint.SetValue(new Vector3(0, 10, 0), 1);
-        wayPoint.SetValue(new Vector3(10, 10, 0), 2);
-        wayPoint.SetValue(new Vector3(10, 0, 0), 3);
+        temp = 15f * Time.deltaTime;
+        wayPoint = new Vector3[18];
+        for(int i = 0; i < 9; i++)
+        {
+            wayPoint.SetValue(new Vector3(-45 + 5 * i,2.5f * i, 0), i);
+        }
+        for (int i = 0; i < 9; i++)
+        {
+            wayPoint.SetValue(new Vector3(5 * i, 22f - 2.5f * i, 0), i+9);
+        }
 
     }
     //원 생성하는 함수
