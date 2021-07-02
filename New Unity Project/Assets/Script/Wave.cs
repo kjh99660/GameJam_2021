@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour
 {
+    private float time = 30;
     //시간이 지남에 따라 점점 파도가 커지는 함수
     public void SizeUp()
     {
@@ -14,7 +15,7 @@ public class Wave : MonoBehaviour
     {
         if (collision.gameObject.tag == "Land")
         {
-            Destroy(gameObject);
+            
         }
     }
 
@@ -28,5 +29,7 @@ public class Wave : MonoBehaviour
     void Update()
     {
         SizeUp();
+        time -= Time.deltaTime;
+        if (time < 0f) Destroy(gameObject);
     }
 }
