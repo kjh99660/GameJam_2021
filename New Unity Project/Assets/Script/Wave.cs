@@ -8,7 +8,7 @@ public class Wave : MonoBehaviour
     //시간이 지남에 따라 점점 파도가 커지는 함수
     public void SizeUp()
     {
-        transform.localScale += new Vector3(0.1f, 0.1f, 0f);
+        transform.localScale += new Vector3(0.8f, 0.8f, 0f);
     }
     //특정 조건이 만족되면 파괴되기 - 육지에 도달 시 파괴
     private void OnTriggerEnter2D(Collider2D collision)

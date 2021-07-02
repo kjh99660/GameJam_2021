@@ -9,13 +9,13 @@ public class CenterOfACircle : MonoBehaviour
     private Vector3 pos;
     private float temp;
     [SerializeField]
-    private float coolDown = 3;
+    private float coolDown = 1f;
 
     private int where = 0;
     private bool leftToRight = true;
     void Start()
     {
-        temp = 15f * Time.deltaTime;
+        temp = 20f * Time.deltaTime;
         wayPoint = new Vector3[18];
         for(int i = 0; i < 9; i++)
         {
