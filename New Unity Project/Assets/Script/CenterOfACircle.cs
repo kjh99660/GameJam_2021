@@ -16,15 +16,10 @@ public class CenterOfACircle : MonoBehaviour
     void Start()
     {
         temp = 20f * Time.deltaTime;
-        wayPoint = new Vector3[18];
-        for(int i = 0; i < 9; i++)
-        {
-            wayPoint.SetValue(new Vector3(-45 + 5 * i,2.5f * i, 0), i);
-        }
-        for (int i = 0; i < 9; i++)
-        {
-            wayPoint.SetValue(new Vector3(5 * i, 22f - 2.5f * i, 0), i+9);
-        }
+        wayPoint = new Vector3[3];
+        wayPoint.SetValue(new Vector3(-100, 50, 0), 0);
+        wayPoint.SetValue(new Vector3(0, 50, 0), 1);
+        wayPoint.SetValue(new Vector3(100, 50, 0), 2);
 
     }
     //원 생성하는 함수
