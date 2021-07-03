@@ -19,9 +19,9 @@ public class Camera : MonoBehaviour
     void Update()
     {
         pos = Character.transform.position;
-        if(pos.x > -54f && pos.x < 55f)
+        if(pos.x > -52f && pos.x < 53f)
         {
-            if(pos.y > -57f && pos.y < 19f)
+            if(pos.y > -57f && pos.y < 18f)
             {
                 transform.position = Vector3.SmoothDamp(transform.position, pos, ref velo, 0.05f);
                 transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
